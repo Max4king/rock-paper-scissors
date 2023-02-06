@@ -5,7 +5,7 @@ function getComputerChoice() {
     return choice[(Math.floor(Math.random() * 10)%3)];
 }
 
-function winner_loser(player, computer) {
+function playRound(player, computer) {
     if (player === "rock" && computer === "rock") {
         return ("Draw! Rock doesn't beat Rock");
     }
@@ -39,4 +39,4 @@ function winner_loser(player, computer) {
     }
 }
 
-console.log(winner_loser(playerSelection, getComputerChoice()) );
+console.log(playRound(playerSelection, getComputerChoice()) );

@@ -1,3 +1,6 @@
+const choice = ["rock","paper","scissors"];
+const result = document.querySelector(".result");
+
 function getComputerChoice() {
     return choice[(Math.floor(Math.random() * 10)%3)];
 }
@@ -36,8 +39,11 @@ function playRound(player, computer) {
     }
 }
 
-const playerSelection = prompt("Choose Rock, Paper or Scissors: ");
-const choice = ["rock","paper","scissors"];
-const computerSelection = getComputerChoice();
+for (let i=0; i < 3;i++) {
+    const playerSelection = prompt("Choose Rock, Paper or Scissors: ").toLowerCase();
+    const computerSelection = getComputerChoice();
+    let match_result = playRound(playerSelection, computerSelection);
+    console.log(match_result);
+    result.textContent = match_result;
+}
 
-console.log(playRound(playerSelection, computerSelection) );

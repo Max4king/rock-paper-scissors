@@ -1,6 +1,3 @@
-const playerSelection = prompt("Choose Rock, Paper or Scissors: ");
-const choice = ["rock","paper","scissors"];
-
 function getComputerChoice() {
     return choice[(Math.floor(Math.random() * 10)%3)];
 }
@@ -39,4 +36,8 @@ function playRound(player, computer) {
     }
 }
 
-console.log(playRound(playerSelection, getComputerChoice()) );
+const playerSelection = prompt("Choose Rock, Paper or Scissors: ");
+const choice = ["rock","paper","scissors"];
+const computerSelection = getComputerChoice();
+
+console.log(playRound(playerSelection, computerSelection) );

@@ -1,5 +1,4 @@
 const choice = ["rock","paper","scissors"];
-const result = document.querySelector(".result");
 
 function getComputerChoice() {
     return choice[(Math.floor(Math.random() * 10)%3)];
@@ -44,6 +43,5 @@ for (let i=0; i < 3;i++) {
     const computerSelection = getComputerChoice();
     let match_result = playRound(playerSelection, computerSelection);
     console.log(match_result);
-    result.textContent = match_result;
 }
 

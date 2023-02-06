@@ -7,36 +7,36 @@ function getComputerChoice() {
 
 function winner_loser(player, computer) {
     if (player === "rock" && computer === "rock") {
-        console.log("Draw! Rock doesn't beat Rock");
+        return ("Draw! Rock doesn't beat Rock");
     }
     else if (player === "paper" && computer === "paper") {
-        console.log("Draw! Paper doesn't beat Paper");
+        return ("Draw! Paper doesn't beat Paper");
     }
     else if (player === "scissors" && computer === "scissors") {
-        console.log("Draw! Scissors doesn't beat Scissors");
+        return ("Draw! Scissors doesn't beat Scissors");
     }
     else if (player === "rock" && computer === "scissors") {
-        console.log("You Win! Rock beats Scissors");
+        return ("You Win! Rock beats Scissors");
     }
     else if (player === "rock" && computer === "paper") {
-        console.log("You Lose! Paper beats Rock");
+        return ("You Lose! Paper beats Rock");
     }
     else if (player === "paper" && computer === "rock") {
-        console.log("You Win! Paper beats Rock");
+        return ("You Win! Paper beats Rock");
     }
     else if (player === "paper" && computer === "scissors") {
-        console.log("You Lose! Scissors beats Paper");
+        return ("You Lose! Scissors beats Paper");
     }
     else if (player === "scissors" && computer === "paper") {
-        console.log("You Win! Scissors beats Paper");
+        return ("You Win! Scissors beats Paper");
     }
     else if (player === "scissors" && computer === "rock") {
-        console.log("You Lose! Rock beats Scissors");
+        return ("You Lose! Rock beats Scissors");
     }
     else {
-        console.log("Invalid Answer. you lose");
         console.log(`Your Answer: ${player} and Computer Answer: ${computer}`);
+        return("Invalid Answer. you lose");
     }
 }
 
-winner_loser(playerSelection, getComputerChoice());
+console.log(winner_loser(playerSelection, getComputerChoice()) );

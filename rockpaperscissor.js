@@ -12,9 +12,18 @@ play_btn.addEventListener("click", (e) => play_start());
 player_display.textContent = player_score;
 computer_display.textContent = computer_score;
 const winner = document.querySelector(".winner");
+let playerSelection = ""
+
+const player_choices = document.querySelectorAll(".move");
+player_choices.forEach((player_choice) => {
+    player_choice.addEventListener("click", () => {
+        playerSelection = player_choice.getAttribute('id') 
+    });
+
+})
 
 function play_start() { 
-    const playerSelection = prompt("Choose Rock, Paper or Scissors: ").toLowerCase();
+    //const playerSelection = prompt("Choose Rock, Paper or Scissors: ").toLowerCase();
     const computerSelection = getComputerChoice();
     let match_result = playRound(playerSelection, computerSelection);
     result.textContent = match_result;
